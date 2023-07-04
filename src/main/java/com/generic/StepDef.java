@@ -20,9 +20,11 @@ public class StepDef {
 	@Given("Open browser and go to application")
 	public void open_browser_and_go_to_application() {
 		// code
+		
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
+		options.addArguments("--remote-allow-origins=*");
 		 driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/dolly/Downloads/dev_online%20Banking%20monthly_yearly%20statement.html");
