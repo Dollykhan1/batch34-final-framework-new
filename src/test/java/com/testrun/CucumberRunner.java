@@ -9,8 +9,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		plugin = {"json:/batch34-final-framework/target/Cucumber.json" }, 
-		features ="./src/test/resources/Online Banking Login.feature", 
+		plugin = {"json:./target/Cucumber.json" }, 
+		features ="./src/test/resources/Online Banking LoginTest.feature", 
 		glue ="com.generic", 
 		tags ="@Smoke"
 
