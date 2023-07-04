@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.asserts.SoftAssert;
 
 import com.page.object.model.LoginPage;
@@ -20,7 +21,9 @@ public class StepDef {
 	public void open_browser_and_go_to_application() {
 		// code
 		WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		 driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/dolly/Downloads/dev_online%20Banking%20monthly_yearly%20statement.html");
 
