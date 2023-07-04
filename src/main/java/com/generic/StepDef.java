@@ -11,6 +11,7 @@ import com.page.object.model.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StepDef {
 	WebDriver driver;
@@ -18,6 +19,7 @@ public class StepDef {
 	@Given("Open browser and go to application")
 	public void open_browser_and_go_to_application() {
 		// code
+		WebDriverManager.chromedriver().setup();
 		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/dolly/Downloads/dev_online%20Banking%20monthly_yearly%20statement.html");
