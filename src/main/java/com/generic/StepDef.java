@@ -22,10 +22,10 @@ public class StepDef {
 		// code
 		
 		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--no-sandbox");
-		options.addArguments("--remote-allow-origins=*");
-		 driver = new ChromeDriver(options);
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("--no-sandbox");
+		//options.addArguments("--remote-allow-origins=*");
+		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/dolly/Downloads/dev_online%20Banking%20monthly_yearly%20statement.html");
 
