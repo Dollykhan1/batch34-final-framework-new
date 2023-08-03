@@ -22,10 +22,13 @@ public class StepDef {
 		// code
 		
 		WebDriverManager.chromedriver().setup();
-		//ChromeOptions options = new ChromeOptions();
-		//options.addArguments("--no-sandbox");
-		//options.addArguments("--remote-allow-origins=*");
-		 driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		options.addArguments("--remote-allow-origins=*");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--ignore-ssl-errors=yes");
+		options.addArguments("--ignore-certificate-errors");
+		 driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/dolly/Downloads/dev_online%20Banking%20monthly_yearly%20statement.html");
 
